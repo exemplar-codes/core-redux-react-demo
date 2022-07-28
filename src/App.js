@@ -1,5 +1,34 @@
+import { useState } from "react";
+
+import store from "./store/store";
+
 function App() {
-  return "Hello";
+  const [_, __] = useState();
+  const rerender = () => __({});
+
+  const { count } = store.getState();
+
+  return (
+    <>
+      <button
+        onClick={() => {
+          store.dispatch({ type: "-", rerender });
+        }}
+      >
+        -
+      </button>{" "}
+      &nbsp;
+      {count}
+      &nbsp;
+      <button
+        onClick={() => {
+          store.dispatch({ type: "+", rerender });
+        }}
+      >
+        +
+      </button>
+    </>
+  );
 }
 
 export default App;
