@@ -1,32 +1,12 @@
-import { useState } from "react";
-
-import store from "./store/store";
+import Counter from "./components/Counter";
 
 function App() {
-  const [_, __] = useState();
-  const rerender = () => __({});
-
-  const { count } = store.getState();
-
   return (
     <>
-      <button
-        onClick={() => {
-          store.dispatch({ type: "-", rerender });
-        }}
-      >
-        -
-      </button>{" "}
-      &nbsp;
-      {count}
-      &nbsp;
-      <button
-        onClick={() => {
-          store.dispatch({ type: "+", rerender });
-        }}
-      >
-        +
-      </button>
+      <Counter />
+      <br />
+      <br />
+      <Counter />
     </>
   );
 }
