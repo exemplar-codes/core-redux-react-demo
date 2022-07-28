@@ -1,18 +1,14 @@
-import { useState } from "react";
-
+import useReduxStore from "../hooks/use-redux-store";
 import store from "../store/store";
 
 function Counter() {
-  const [, __] = useState();
-  const rerender = () => __({});
-
-  const { count } = store.getState();
+  const [{ count }, updateStore] = useReduxStore(store);
 
   return (
     <>
       <button
         onClick={() => {
-          store.dispatch({ type: "-", rerender });
+          updateStore({ type: "-"});
         }}
       >
         -
@@ -22,7 +18,7 @@ function Counter() {
       &nbsp;
       <button
         onClick={() => {
-          store.dispatch({ type: "+", rerender });
+          updateStore({ type: "+"});
         }}
       >
         +

@@ -15,7 +15,6 @@ const reducer = (state = { count: 0 }, action) => {
     default:
       newState = state;
   }
-  action.rerender && action.rerender();
   return newState;
 };
 
