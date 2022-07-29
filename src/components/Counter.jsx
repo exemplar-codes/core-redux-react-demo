@@ -8,7 +8,7 @@ function Counter() {
     <>
       <button
         onClick={() => {
-          updateStore({ type: "-"});
+          updateStore({ type: "-" });
         }}
       >
         -
@@ -18,7 +18,7 @@ function Counter() {
       &nbsp;
       <button
         onClick={() => {
-          updateStore({ type: "+"});
+          updateStore({ type: "+" });
         }}
       >
         +
