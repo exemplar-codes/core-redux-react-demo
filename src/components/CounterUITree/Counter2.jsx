@@ -9,7 +9,7 @@ function Counter2() {
 
   return (
     <>
-      <h3>Counter 1</h3>
+      <h3>Counter 2</h3>
       <button onClick={decrementHandler}>-</button> &nbsp;
       {count}
       &nbsp;

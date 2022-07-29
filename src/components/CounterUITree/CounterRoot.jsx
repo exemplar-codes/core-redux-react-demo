@@ -21,6 +21,8 @@ function CounterRoot() {
       <h2>
         Store is read directly by all, but dispatch is done through the custom
         root dispatch method
+        <br />
+        All dependent components get re-rendered
       </h2>
       <div>
         <button onClick={decrementHandler}>-</button> &nbsp;

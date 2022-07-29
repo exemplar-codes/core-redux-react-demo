@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const reducer = (state = { count: 0 }, action) => {
-  console.log("Reducer called");
+  console.log("Reducer called", action);
   let newState;
   switch (action.type) {
     case "+":
@@ -15,6 +15,7 @@ const reducer = (state = { count: 0 }, action) => {
     default:
       newState = state;
   }
+  action.rerender && action.rerender();
   return newState;
 };
 
