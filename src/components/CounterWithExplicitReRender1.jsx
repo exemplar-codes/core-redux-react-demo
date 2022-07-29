@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-import store from "../store/storeWithExplicitReRender";
+import storeWithExplicitReRender from "../store/storeWithExplicitReRender";
 
 function CounterWithExplicitReRender1() {
   const [, _] = useState();
 
   const rerender = () => _({});
-  const { count } = store.getState();
+  const { count } = storeWithExplicitReRender.getState();
 
   const incrementHandler = () =>
-    store.dispatch({ type: "+", rerender: rerender });
+    storeWithExplicitReRender.dispatch({ type: "+", rerender: rerender });
   const decrementHandler = () =>
-    store.dispatch({ type: "-", rerender: rerender });
+    storeWithExplicitReRender.dispatch({ type: "-", rerender: rerender });
 
   return (
     <>

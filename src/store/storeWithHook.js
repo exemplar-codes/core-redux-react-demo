@@ -18,6 +18,6 @@ const reducer = (state = { count: 0 }, action) => {
   return newState;
 };
 
-const store = createStore(reducer);
+const storeWithHook = createStore(reducer);
 
-export default store;
+export default storeWithHook;

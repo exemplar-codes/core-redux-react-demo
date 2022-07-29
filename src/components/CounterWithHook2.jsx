@@ -1,8 +1,8 @@
 import useReduxStore from "../hooks/use-redux-store";
-import store from "../store/storeWithHook";
+import storeWithHook from "../store/storeWithHook";
 
 function CounterWithHook2() {
-  const [{ count }, updateStore] = useReduxStore(store);
+  const [{ count }, updateStore] = useReduxStore(storeWithHook);
 
   return (
     <>
