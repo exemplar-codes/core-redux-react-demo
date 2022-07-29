@@ -1,2 +1,4 @@
-# redux-react-demo
-Redux demo with React
+# core-redux-react-demo
+Core Redux demo with React
+
+Using only the `redux` package with React.
