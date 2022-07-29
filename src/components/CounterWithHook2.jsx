@@ -1,7 +1,7 @@
 import useReduxStore from "../hooks/use-redux-store";
-import store from "../store/store";
+import store from "../store/storeWithHook";
 
-function Counter() {
+function CounterWithHook2() {
   const [{ count }, updateStore] = useReduxStore(store);
 
   return (
@@ -27,4 +27,4 @@ function Counter() {
   );
 }
 
-export default Counter;
+export default CounterWithHook2;

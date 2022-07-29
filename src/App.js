@@ -1,12 +1,14 @@
-import Counter from "./components/Counter";
+import CounterWithHook2 from "./components/CounterWithHook2";
+import CounterWithExplicitReRender1 from "./components/CounterWithExplicitReRender1";
 
 function App() {
   return (
     <>
-      <Counter />
+      <h2>{"CounterWithExplicitReRender1"}</h2>
+      <CounterWithExplicitReRender1 />
       <br />
-      <br />
-      <Counter />
+      <h2>{"CounterWithHook2"}</h2>
+      <CounterWithHook2 />
     </>
   );
 }
